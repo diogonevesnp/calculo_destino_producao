@@ -1,24 +1,24 @@
 # Função para realização dos cálculos de divisão para cada tipo de produção, envase/expedição.
 def quantidade_correta (opcao_linha, quantidade_producao, peso_bag_sacaria_expedicao):
     if opcao_linha == 1:
-        total_bag_sacaria = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao
+        total_bag_sacaria_epedicao = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao
     elif opcao_linha == 2:
-        total_bag_sacaria = (1000 * quantidade_producao) / peso_bag_sacaria_expedicao
+        total_bag_sacaria_epedicao = (1000 * quantidade_producao) / peso_bag_sacaria_expedicao
     elif opcao_linha == 3 or opcao_linha == 4:
-         total_bag_sacaria = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao
+         total_bag_sacaria_epedicao = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao
     elif opcao_linha == 5:
-         total_bag_sacaria = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao
+         total_bag_sacaria_epedicao = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao
     elif opcao_linha == 6:
-        total_bag_sacaria = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao
+        total_bag_sacaria_epedicao = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao
     elif opcao_linha == 7:
-        total_bag_sacaria = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao 
+        total_bag_sacaria_epedicao = (2000 * quantidade_producao) / peso_bag_sacaria_expedicao 
     elif opcao_linha == 8:
-        total_bag_sacaria = (1000 * quantidade_producao) / peso_bag_sacaria_expedicao
+        total_bag_sacaria_epedicao = (1000 * quantidade_producao) / peso_bag_sacaria_expedicao
     elif opcao_linha == 9:
-        total_bag_sacaria = (1000 * quantidade_producao) / peso_bag_sacaria_expedicao                       
+        total_bag_sacaria_epedicao = (1000 * quantidade_producao) / peso_bag_sacaria_expedicao                       
     else:
-        total_bag_sacaria = 0
-    return total_bag_sacaria  
+        total_bag_sacaria_epedicao = 0
+    return total_bag_sacaria_epedicao  
 
 # Formatador de valores, padrão brasileiro
 def formata_br(valor, casas_decimais=2, dividir_por_mil=False):
