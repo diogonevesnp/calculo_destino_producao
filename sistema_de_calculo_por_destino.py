@@ -15,7 +15,9 @@ def quantidade_correta (opcao_linha, quantidade_producao, peso_bag_sacaria_exped
     elif opcao_linha == 8:
         total_bag_sacaria_epedicao = (1000 * quantidade_producao) / peso_bag_sacaria_expedicao
     elif opcao_linha == 9:
-        total_bag_sacaria_epedicao = (1000 * quantidade_producao) / peso_bag_sacaria_expedicao                       
+        total_bag_sacaria_epedicao = (1000 * quantidade_producao) / peso_bag_sacaria_expedicao
+    elif opcao_linha == 10:
+        total_bag_sacaria_epedicao = (quantidade_producao / peso_bag_sacaria_expedicao) - 10                           
     else:
         total_bag_sacaria_epedicao = 0
     return total_bag_sacaria_epedicao  
@@ -39,7 +41,8 @@ print('[5] Sac Pet/Peixes')
 print('[6] Exp Granel Ruminantes')
 print('[7] Exp Granel Aves/suinos')
 print('[8] Exp Granel Pet/PEixes')
-print('[9] Envase Cães\n')
+print('[9] Envase Cães')
+print('[10] Carregamento Expedição\n')
 
 # Condição de escolha e filtro
 opcao_linha = int(input('Digite uma opção: '))
@@ -61,7 +64,10 @@ elif opcao_linha == 8:
   quantidade_producao = int(input('Qunatas bateladas?: '))
 elif opcao_linha == 9:
   quantidade_producao = int(input('Qunatas bateladas?: '))
-  peso_bag_sacaria_expedicao = int(input('Qual o peso de cada pacote?: ')) 
+  peso_bag_sacaria_expedicao = int(input('Qual o peso de cada pacote?: '))
+elif opcao_linha == 10:
+  quantidade_producao = int(input('Quantidade a ser carregada?: '))
+  peso_bag_sacaria_expedicao = int(input('Quantas caixas?: '))  
 else:
     print('Opção inválida')  
 
@@ -86,7 +92,9 @@ elif opcao_linha == 7:
 elif opcao_linha == 8:
     print(f'Em uma produção de {quantidade_producao} bateladas na linha Pet/Peixes, o total para o Granel Pet/Peixes é de {formata_br(resultado)}')
 elif opcao_linha == 9:
-    print(f'Em uma produção de {quantidade_producao} bateladas na linha Pet/Peixes (ração de cães), o total de Pacotes a ser tirado é de {formata_br(resultado)}')                          
+    print(f'Em uma produção de {quantidade_producao} bateladas na linha Pet/Peixes (ração de cães), o total de Pacotes a ser tirado é de {formata_br(resultado)}')
+elif opcao_linha == 10:
+    print(f'O caminhão deve ser carregado desta forma, {formata_br(resultado)} em cada caixa.')                            
 else:
     print('Batelada não reconhecida')
 print() 
